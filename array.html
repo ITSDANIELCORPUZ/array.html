@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Array Methods Demo</h1>
+    <button onclick="arrayLength()">Array length</button>
+    <button onclick="arrayToString()">Array toString()</button>
+    <button onclick="arrayPop()">Array pop()</button>
+    <div id="output"></div>
+
+    <script>
+        // Initialize an example array
+        let myArray = [1, 2, 3, 4, 5];
+
+        // Function to display array length
+        function arrayLength() {
+            const output = document.getElementById("output");
+            output.innerHTML = `Array length: ${myArray.length}`;
+        }
+
+        // Function to display array as a string
+        function arrayToString() {
+            const output = document.getElementById("output");
+            output.innerHTML = `Array as string: ${myArray.toString()}`;
+        }
+
+        // Function to remove and display the last element of the array
+        function arrayPop() {
+            const output = document.getElementById("output");
+            if (myArray.length > 0) {
+                const poppedElement = myArray.pop();
+                output.innerHTML = `Popped element: ${poppedElement}`;
+            } else {
+                output.innerHTML = "Array is empty.";
+            }
+        }
+    </script>
+</body>
+</html>
